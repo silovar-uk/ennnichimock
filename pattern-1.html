@@ -1,118 +1,249 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="炎日2026 特設ページモック案1 九灯の月夜。">
-  <title>九灯の月夜｜炎日 2026 モック</title>
-  <link rel="stylesheet" href="assets/app.css">
-  <script defer src="assets/app.js"></script>
+<meta charset="utf-8">
+<title>九灯の月夜｜炎日 2026 特設ページ</title>
+<meta name="description" content="浦和レッズ「炎日 2026」。九つの提灯を灯しながら、9月19日 東京ヴェルディ戦の一日を巡る特設ページ。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="九灯の月夜｜炎日 2026">
+<meta property="og:description" content="九つの提灯を灯しながら、浦和の祭りと東京ヴェルディ戦への一日を巡る。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-pattern-1.svg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://example.com/ennnichi2026/pattern-1.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/pattern-1.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "炎日 2026｜浦和レッズ vs 東京ヴェルディ",
+  "startDate": "2026-09-19T18:30:00+09:00",
+  "location": { "@type": "Place", "name": "埼玉スタジアム2〇〇2" },
+  "eventStatus": "https://schema.org/EventScheduled"
+}
+</script>
 </head>
-<body class="p1">
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <div class="mock-topbar"><a href="index.html" aria-label="モック一覧へ戻る">←</a></div>
+<body id="top" data-pattern="1">
+<a class="skip-link" href="#main">本文へ移動</a>
 
-  <main id="main">
-    <header class="hero" id="top">
-      <div class="container hero-content">
-        <span class="mock-badge">PATTERN 01 / 九灯の月夜</span>
-        <div class="hero-logo" aria-label="炎日">炎日<span>ENN NICHI</span></div>
-        <p class="hero-copy">九つの灯りが、浦和の秋をひらく。</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#lanterns">九つの提灯を灯す</a>
-          <a class="btn btn-light" href="#ticket">チケット情報</a>
-        </div>
-        <div class="hero-meta">
-          <div class="match-strip"><span class="match-team">浦和レッズ</span><span class="match-vs">VS</span><span class="match-team">東京ヴェルディ</span></div>
-          <div class="info-grid" style="margin-top:14px">
-            <div class="info-card"><small>DATE</small><strong>2026.9.19 SAT</strong></div>
-            <div class="info-card"><small>KICK OFF</small><strong>18:30</strong></div>
-            <div class="info-card"><small>PLACE</small><strong>埼玉スタジアム2002</strong></div>
-          </div>
-        </div>
+<nav class="site-nav">
+  <a class="site-nav__brand" href="index.html">炎日 2026</a>
+  <div class="site-nav__links">
+    <a href="#nine">九つの灯</a>
+    <a href="#plan">タイムテーブル</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="site-nav__cta" href="#ticket">チケット</a>
+  <button class="site-nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-panel">メニュー</button>
+</nav>
+<div class="site-nav__panel" id="nav-panel" data-nav-panel hidden>
+  <a href="#nine">九つの灯</a>
+  <a href="#plan">タイムテーブル</a>
+  <a href="#faq">FAQ</a>
+  <a href="#ticket">チケット購入</a>
+</div>
+
+<div class="notice-banner">
+  <div class="container"><p>このページはデザイン検討用モックです。記載内容・日時は仮情報です。<span class="provisional-flag" data-provisional="true">仮情報</span></p></div>
+</div>
+
+<main id="main">
+
+<header class="hero hero--p1">
+  <div class="container">
+    <p class="hero__eyebrow eyebrow">DESIGN STUDY — PATTERN 01 / INTERACTIVE</p>
+    <h1 class="hero__title">九つの灯を、<br>自分の手で灯す夜。</h1>
+    <p class="lede hero__lede">
+      浦和の祭り「炎日」が、初めて秋に開催される。<br>
+      九つの提灯を一つずつ灯すたび、その日の楽しみが明らかになる。<br>
+      すべて灯し終えたとき、月は満ちる。
+    </p>
+    <dl class="hero__facts">
+      <div class="hero__fact"><dt>DATE</dt><dd class="numeral" data-src="match.dateLabel" data-provisional="true">2026年9月19日（土）</dd></div>
+      <div class="hero__fact"><dt>KICK OFF</dt><dd class="numeral" data-src="match.kickoff" data-provisional="true">18:30</dd></div>
+      <div class="hero__fact"><dt>VENUE</dt><dd data-src="match.venueShort" data-provisional="true">埼スタ</dd></div>
+    </dl>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#nine">九つの灯を見る</a>
+      <a class="btn btn--ghost" href="#ticket">チケット情報</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="nine" aria-labelledby="nine-h">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow eyebrow">NINE LANTERNS, NINE MOMENTS</span>
+      <h2 id="nine-h">九つの提灯、九つの楽しみ。</h2>
+      <p class="lede">灯すごとに、9月19日という一日の輪郭が浮かび上がる。すべて灯すと、月は満ちる。</p>
+    </div>
+
+    <div class="moon-indicator" role="status">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use data-moon-use href="assets/svg/moon-phases.svg#moon-0"></use></svg>
+      <span class="moon-indicator__label" data-moon-label>0 / 9 灯 — 新月</span>
+    </div>
+
+    <div class="lantern-rail" role="group" aria-label="九つの提灯（クリックで詳細を表示）">
+      <!-- 9個の提灯ボタンをループ想定で明示的に列挙 -->
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-1">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">01</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-2">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">02</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-3">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">03</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-4">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">04</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-5">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">05</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-6">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">06</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-7">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">07</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-8">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">08</span>
+      </button>
+      <button class="lantern-btn" data-lantern-btn aria-pressed="false" aria-controls="detail-9">
+        <svg class="lantern-btn__icon" viewBox="0 0 80 120" aria-hidden="true"><use href="assets/svg/chochin.svg#chochin"></use></svg>
+        <span class="lantern-btn__num numeral">09</span>
+      </button>
+    </div>
+
+    <div class="lantern-details">
+      <div class="lantern-detail" id="detail-1" data-reveal>
+        <span class="lantern-detail__tag eyebrow">GATHER</span>
+        <h3>浦和の祭りが集う</h3>
+        <p class="card__body">和太鼓、よさこい、阿波踊り、浦和おどり——出演団体を一つのテーマで束ねた、初の秋開催。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </header>
-
-    <section class="section-pad lantern-section" id="lanterns">
-      <div class="container">
-        <p class="eyebrow">LIGHT THE FESTIVAL</p>
-        <h1 class="section-title">灯すたび、<br>一日の楽しみが見えてくる。</h1>
-        <p class="section-lead">提灯をタップすると点灯します。九つの灯りは、9月19日の炎日を構成する九つの体験。情報を読む行為そのものを、祭りの準備に変える案です。</p>
-        <div class="lantern-grid">
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>01　集う</strong><small>浦和の団体が埼スタへ</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>02　響く</strong><small>和太鼓の音が秋空へ</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>03　舞う</strong><small>よさこい・阿波踊り</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>04　遊ぶ</strong><small>縁日ブースでひと勝負</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>05　味わう</strong><small>多彩なキッチンカー</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>06　撮る</strong><small>月と櫓の記念写真</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>07　覚える</strong><small>浦和おどりを30秒予習</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>08　踊る</strong><small>櫓を囲んで総踊り</small></button>
-          <button class="lantern-button" type="button" aria-pressed="false"><strong>09　闘う</strong><small>祭りの熱をスタンドへ</small></button>
-        </div>
-        <p class="lantern-result" aria-live="polite">0 / 9 の灯りが点灯中</p>
+      <div class="lantern-detail" id="detail-2" data-reveal>
+        <span class="lantern-detail__tag eyebrow">SOUND</span>
+        <h3>和太鼓が響く</h3>
+        <p class="card__body">開幕を知らせる最初の音。腹に届く低音が、祭りの始まりを告げる。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-
-    <section class="section-pad dark-section" id="events">
-      <div class="container">
-        <p class="eyebrow">THE NINE LIGHTS</p>
-        <h2 class="section-title">主役は、<br>一つの企画ではない。</h2>
-        <p class="section-lead">それぞれの団体、遊び、食、踊りが一灯ずつ祭りをつくる。出演数の多さを単なる一覧ではなく、「灯りが集まる景色」として編集します。</p>
-        <div class="card-row">
-          <article class="festival-card"><b>PERFORMANCE</b><h3>浦和の芸能が集う</h3><p>よさこい、和太鼓、阿波踊り。団体ごとの詳細、出演時間、場所を明快に掲載。</p></article>
-          <article class="festival-card"><b>ENNICHI & FOOD</b><h3>遊びと味が並ぶ</h3><p>縁日ブースとキッチンカーを、対象年齢・料金・場所からすぐ探せる設計。</p></article>
-          <article class="festival-card"><b>URAWA ODORI</b><h3>最後は、みんなで</h3><p>振り付けを知らなくても参加可能。櫓を囲み、祭りの熱を試合へつなぎます。</p></article>
-        </div>
+      <div class="lantern-detail" id="detail-3" data-reveal>
+        <span class="lantern-detail__tag eyebrow">DANCE</span>
+        <h3>よさこいが舞う</h3>
+        <p class="card__body">旗と鳴子が秋空を彩る。地域チームが日頃の練習の成果を披露する。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-
-    <section class="section-pad dark-section" id="schedule">
-      <div class="container timeline">
-        <div>
-          <p class="eyebrow">MOON CLOCK</p>
-          <h2 class="section-title">月が満ちるように、<br>一日が完成する。</h2>
-          <div class="time-list" style="margin-top:34px">
-            <article class="time-item"><time>14:00</time><div><h3>炎日スタート</h3><p>縁日ブース、キッチンカーが順次オープン。</p></div></article>
-            <article class="time-item"><time>15:00</time><div><h3>伝統芸能</h3><p>よさこい・和太鼓・阿波踊りが会場を盛り上げます。</p></div></article>
-            <article class="time-item"><time>16:40</time><div><h3>みんなで浦和おどり</h3><p>櫓を囲んで総踊り。途中参加、見学も歓迎。</p></div></article>
-            <article class="time-item"><time>17:30</time><div><h3>スタジアムへ</h3><p>祭りの熱気をそのままスタンドへ持ち込みます。</p></div></article>
-            <article class="time-item"><time>18:30</time><div><h3>キックオフ</h3><p>明治安田J1リーグ 浦和レッズ vs 東京ヴェルディ。</p></div></article>
-          </div>
-        </div>
-        <div class="moon-clock" aria-label="キックオフ時刻18時30分"><div><strong>18:30</strong><span>祭りの先に、試合がある。</span></div></div>
+      <div class="lantern-detail" id="detail-4" data-reveal>
+        <span class="lantern-detail__tag eyebrow">JOIN</span>
+        <h3>阿波踊りに出会う</h3>
+        <p class="card__body">見る人から、踊る人へ。飛び入り参加の輪が自然に広がっていく。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-
-    <section class="section-pad dark-section" id="map">
-      <div class="container">
-        <p class="eyebrow">FESTIVAL MAP</p><h2 class="section-title">今いる場所から、<br>次の灯りへ。</h2>
-        <p class="section-lead">一覧・タイムテーブル・マップは同じ情報を使用する想定。更新時の食い違いを防ぎ、当日も迷わず使えるページにします。</p>
-        <div class="simple-map" aria-label="会場マップのモック"><div class="map-pin"><span>櫓・浦和おどり</span></div><div class="map-pin"><span>伝統芸能</span></div><div class="map-pin"><span>縁日</span></div><div class="map-pin"><span>キッチンカー</span></div></div>
+      <div class="lantern-detail" id="detail-5" data-reveal>
+        <span class="lantern-detail__tag eyebrow">PLAY</span>
+        <h3>縁日で遊ぶ</h3>
+        <p class="card__body">射的、輪投げ、金魚すくい。子どもも大人も、ひと勝負を楽しめる。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-
-    <section class="section-pad dark-section" id="faq">
-      <div class="container">
-        <p class="eyebrow">BEFORE YOU COME</p><h2 class="section-title">楽しむための、<br>確かな情報。</h2>
-        <div class="faq-list" style="margin-top:34px">
-          <details><summary>炎日への参加に試合チケットは必要ですか？</summary><p>掲載内容はモックです。実際の参加条件はイベント詳細決定後に明記します。</p></details>
-          <details><summary>雨天の場合はどうなりますか？</summary><p>中止・場所変更・実施可否を、ページ最上部の緊急情報枠で案内する想定です。</p></details>
-          <details><summary>浦和おどりを知らなくても参加できますか？</summary><p>見るだけ、途中参加も歓迎する設計。短い予習動画やイラストも掲載します。</p></details>
-        </div>
+      <div class="lantern-detail" id="detail-6" data-reveal>
+        <span class="lantern-detail__tag eyebrow">FOOD</span>
+        <h3>グルメを味わう</h3>
+        <p class="card__body">キッチンカーが一堂に集結。秋の味覚を楽しみながら開始を待つ。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-
-    <section class="section-pad dark-section" id="ticket">
-      <div class="container">
-        <p class="eyebrow">MATCH DAY</p><h2 class="section-title">九つの灯りの先へ。<br>最後はスタンドで。</h2>
-        <p class="section-lead">チケット導線は演出の中に隠さず、ファーストビュー・固定ナビ・ページ末尾の三か所に明示します。</p>
-        <div style="margin-top:30px"><a class="btn btn-primary" href="#top">チケット購入ページへ（モック）</a></div>
-        <p class="mock-note" style="margin-top:28px">このページはデザイン検討用モックです。記載のイベント時間・内容・料金・参加条件はすべて仮情報です。</p>
+      <div class="lantern-detail" id="detail-7" data-reveal>
+        <span class="lantern-detail__tag eyebrow">PHOTO</span>
+        <h3>月と櫓を撮る</h3>
+        <p class="card__body">初秋開催だけの景色がある。日が落ちて灯る提灯と、昇る月を一枚に。<span class="area-badge area-badge--free">FREE AREA</span></p>
       </div>
-    </section>
-  </main>
+      <div class="lantern-detail" id="detail-8" data-reveal>
+        <span class="lantern-detail__tag eyebrow">ODORI</span>
+        <h3>みんなで浦和おどり</h3>
+        <p class="card__body">祭りの熱が一つの輪になる、この日いちばんの盛り上がり。<span class="area-badge area-badge--free">FREE AREA</span></p>
+      </div>
+      <div class="lantern-detail" id="detail-9" data-reveal>
+        <span class="lantern-detail__tag eyebrow">MATCH</span>
+        <h3>東京V戦へ</h3>
+        <p class="card__body">一日の終着点はスタンド。祭りの熱をそのままキックオフへ。<span class="area-badge area-badge--ticket">MATCH TICKET REQUIRED</span></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <nav class="utility-nav" aria-label="ページ内ナビゲーション"><div class="utility-nav__inner"><a href="#lanterns">九つの灯り</a><a href="#events">イベント</a><a href="#schedule">時間</a><a href="#map">マップ</a><a href="#faq">FAQ</a><a class="ticket" href="#ticket">チケット</a></div></nav>
-  <footer class="site-footer"><div class="container site-footer__inner"><p>炎日 2026 SPECIAL PAGE MOCK / PATTERN 01</p><a href="index.html">5案を比較する</a></div></footer>
+<section class="section section--tight" id="plan" aria-labelledby="plan-h">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow eyebrow">TIMETABLE</span>
+      <h2 id="plan-h">9月19日、一日の流れ。</h2>
+    </div>
+    <ol class="timeline">
+      <li class="timeline__item"><span class="timeline__time numeral" data-src="schedule[0].time" data-provisional="true">14:00</span><h3>炎日開始</h3><p class="card__body">縁日・グルメエリアオープン <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral" data-src="schedule[1].time" data-provisional="true">15:00</span><h3>伝統芸能ステージ</h3><p class="card__body">和太鼓・よさこい・阿波踊り <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral" data-src="schedule[2].time" data-provisional="true">16:40</span><h3>浦和おどり総踊り</h3><p class="card__body">来場者参加型、櫓を囲んで実施 <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral" data-src="schedule[3].time" data-provisional="true">18:00</span><h3>スタジアム開場</h3><p class="card__body"><span class="area-badge area-badge--ticket">MATCH TICKET REQUIRED</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral" data-src="schedule[4].time" data-provisional="true">18:30</span><h3>キックオフ</h3><p class="card__body">浦和レッズ vs 東京ヴェルディ <span class="area-badge area-badge--ticket">MATCH TICKET REQUIRED</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--tight" id="faq" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow eyebrow">FINE PRINT, CLEARLY</span>
+      <h2 id="faq-h">注意事項こそ、読みやすく。</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-1">イベント内容・時間は確定情報ですか？</button>
+        <div class="faq__a" id="faq-a-1" data-faq-a><p>モック上の仮情報です。本番では最終更新日を明記し、変更時は上部の告知枠でお知らせします。</p></div>
+      </div>
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-2">無料エリアとチケットが必要なエリアはどう見分けますか？</button>
+        <div class="faq__a" id="faq-a-2" data-faq-a><p>各項目に「FREE AREA」「MATCH TICKET REQUIRED」を必ず表示します。</p></div>
+      </div>
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-3">雨天の場合はどうなりますか？</button>
+        <div class="faq__a" id="faq-a-3" data-faq-a><p>荒天時は縁日・ステージ企画の一部を中止・変更する場合があります。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-footer" id="ticket" aria-labelledby="cta-h">
+  <div class="container">
+    <h2 id="cta-h">灯を九つ集めたら、<br>あとはスタジアムで会おう。</h2>
+    <p class="lede">浦和レッズ vs 東京ヴェルディ。<span data-src="match.dateLabel" data-provisional="true">2026年9月19日（土）</span> <span data-src="match.kickoff" data-provisional="true">18:30</span> キックオフ。</p>
+    <a class="btn btn--primary" href="#top">チケット購入ページへ（モック）</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav class="site-footer__nav">
+      <a href="#nine">九つの灯</a>
+      <a href="#plan">タイムテーブル</a>
+      <a href="#faq">FAQ</a>
+      <a href="#ticket">チケット</a>
+      <a href="index.html">5案を比較する</a>
+    </nav>
+    <p>このページはデザイン検討用モックです。記載内容は仮情報です。 / 炎日 2026 SPECIAL PAGE MOCK / PATTERN 01</p>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pattern-1-lanterns.js"></script>
+<script src="assets/js/data-render.js"></script>
 </body>
 </html>

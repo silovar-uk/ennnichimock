@@ -1,0 +1,138 @@
+/* ============================================================
+   PATTERN 04 — 9.19 FESTIVAL TICKET
+   人格：最も編集的・ポスター的。クラブレッドを最も強く使い、コントラストを最大化。
+   ============================================================ */
+
+:root {
+  --surface-night-deep: #0a0505;
+  --surface-night: #120a0c;
+  --surface-night-raised: #1c1214;
+  --accent-club: #e2231a;
+  --accent-club-deep: #a3160f;
+  --accent-ember: #ff8a4d;
+  --radius-card: 2px;
+  --radius-pill: 2px;
+  --font-accent: "Shippori Antique B1", var(--font-display);
+}
+
+.btn, .area-badge, .site-nav__cta { border-radius: var(--radius-pill); }
+
+/* ---------- ポスター見出し（巨大な日付） ---------- */
+.poster-date {
+  font-family: var(--font-accent);
+  font-size: clamp(4.5rem, 16vw, 11rem);
+  line-height: 0.85;
+  color: var(--accent-club);
+  letter-spacing: 0.01em;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--line-gold) 40%, transparent);
+}
+
+.hero--p4 {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 48px, color-mix(in srgb, var(--accent-club) 6%, transparent) 48px 49px),
+    linear-gradient(180deg, var(--surface-night-deep), var(--surface-night));
+}
+
+.stub-serial {
+  font-family: var(--font-accent);
+  letter-spacing: 0.14em;
+  color: var(--ink-on-night-muted);
+  font-size: var(--p-fs-00);
+}
+
+/* ---------- チケット半券コンポーネント ---------- */
+.ticket-stub {
+  position: relative;
+  background: var(--surface-night-raised);
+  border: 1px solid color-mix(in srgb, var(--line-gold) 35%, transparent);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 760px) {
+  .ticket-stub { grid-template-columns: 1fr 220px; }
+}
+.ticket-stub__main { padding: var(--p-space-6); }
+.ticket-stub__side {
+  padding: var(--p-space-6);
+  border-top: 1px dashed color-mix(in srgb, var(--line-gold) 55%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--p-space-4);
+}
+@media (min-width: 760px) {
+  .ticket-stub__side {
+    border-top: none;
+    border-left: 1px dashed color-mix(in srgb, var(--line-gold) 55%, transparent);
+  }
+}
+/* 半券の切り取り穴（マスクで円形にくり抜く演出） */
+.ticket-stub__side::before,
+.ticket-stub__side::after {
+  content: "";
+  position: absolute;
+  width: 22px; height: 22px;
+  background: var(--surface-night);
+  border-radius: 50%;
+  right: -11px;
+}
+@media (max-width: 759px) {
+  .ticket-stub__side::before,
+  .ticket-stub__side::after { display: none; }
+}
+.ticket-stub__side::before { top: -11px; }
+.ticket-stub__side::after { bottom: -11px; }
+
+.ticket-stub__rotated {
+  writing-mode: vertical-rl;
+  font-family: var(--font-accent);
+  letter-spacing: 0.2em;
+  color: var(--accent-club);
+  font-size: var(--p-fs-1);
+}
+
+/* ---------- 9つの楽しみ：番号を主役にしたグリッド ---------- */
+.nine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1px;
+  background: color-mix(in srgb, var(--line-gold) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line-gold) 25%, transparent);
+}
+.nine-grid__item {
+  background: var(--surface-night);
+  padding: var(--p-space-4);
+}
+.nine-grid__num {
+  font-family: var(--font-accent);
+  font-size: var(--p-fs-4);
+  color: var(--accent-club);
+  display: block;
+  line-height: 1;
+  margin-bottom: var(--p-space-2);
+}
+.nine-grid__tag { color: var(--ink-on-night-muted); }
+
+/* ---------- モデルコースビルダー ---------- */
+.builder {
+  display: grid;
+  gap: var(--p-space-6);
+}
+@media (min-width: 860px) {
+  .builder { grid-template-columns: 1fr 1fr; }
+}
+.builder__options { display: flex; flex-wrap: wrap; gap: var(--p-space-3); }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid color-mix(in srgb, var(--p-night-90) 45%, transparent);
+  padding: 0.6em 1.1em;
+  cursor: pointer;
+  font-size: var(--p-fs-0);
+}
+.chip input { accent-color: var(--accent-club); }
+.builder__result { border-left: 2px solid var(--accent-club); padding-left: var(--p-space-5); }
+.builder__note { font-size: var(--p-fs-00); color: var(--ink-on-night-muted); margin-top: var(--p-space-3); }

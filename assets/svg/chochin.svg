@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="chochin" viewBox="0 0 80 120">
+      <!-- 吊り紐 -->
+      <line x1="40" y1="0" x2="40" y2="14" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+      <!-- 上下の口輪 -->
+      <ellipse cx="40" cy="16" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="40" cy="104" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <!-- 提灯の胴（発光部） -->
+      <path class="chochin__body" d="M24 16 C6 40, 6 80, 24 104 L56 104 C74 80, 74 40, 56 16 Z"
+            fill="currentColor" opacity="0.14"/>
+      <!-- 骨（横線） -->
+      <g stroke="currentColor" stroke-width="1" opacity="0.55">
+        <path d="M14 34 Q40 40 66 34"/>
+        <path d="M9 46 Q40 53 71 46"/>
+        <path d="M7 58 Q40 66 73 58"/>
+        <path d="M7 70 Q40 78 73 70"/>
+        <path d="M9 82 Q40 89 71 82"/>
+        <path d="M14 92 Q40 98 66 92"/>
+      </g>
+      <!-- 文字（"祭" を意匠化した簡略記号） -->
+      <text class="chochin__mark" x="40" y="66" text-anchor="middle" font-size="26" fill="currentColor" font-family="serif" opacity="0.85">祭</text>
+      <!-- 下部の房 -->
+      <line x1="40" y1="109" x2="40" y2="120" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+    </symbol>
+  </defs>
+</svg>

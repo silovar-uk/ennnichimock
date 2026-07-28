@@ -1,49 +1,216 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="炎日2026 特設ページモック案2 月影絵巻。">
-  <title>月影絵巻｜炎日 2026 モック</title>
-  <link rel="stylesheet" href="assets/app.css">
-  <script defer src="assets/app.js"></script>
+<meta charset="utf-8">
+<title>月影絵巻｜炎日 2026 特設ページ</title>
+<meta name="description" content="浦和レッズ「炎日 2026」。静かな月夜から、芸能、総踊り、試合へ。一日を物語として編んだ特設ページ。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="月影絵巻｜炎日 2026">
+<meta property="og:description" content="静かな月夜から、芸能、総踊り、試合へ。一日の物語。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-pattern-2.svg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/pattern-2.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "SportsEvent", "name": "炎日 2026｜浦和レッズ vs 東京ヴェルディ",
+  "startDate": "2026-09-19T18:30:00+09:00", "location": { "@type": "Place", "name": "埼玉スタジアム2〇〇2" },
+  "eventStatus": "https://schema.org/EventScheduled" }
+</script>
 </head>
-<body class="p2">
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <div class="mock-topbar"><a href="index.html" aria-label="モック一覧へ戻る">←</a></div>
-  <div class="moon-sticky" aria-hidden="true"></div>
+<body id="top" data-pattern="2">
+<a class="skip-link" href="#main">本文へ移動</a>
 
-  <main id="main">
-    <header class="hero" id="top">
-      <div class="paper-noise" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <span class="hero-kicker">PATTERN 02　月影絵巻</span>
-        <h1 class="hero-title">月が昇る。<br>浦和が踊る。<small>炎日、初の秋開催。</small></h1>
-        <p class="hero-copy">初秋の埼スタに祭りが集い、櫓のまわりに輪が生まれ、その熱が東京V戦へ流れ込む。一日の時間そのものを、縦に開く絵巻として描く案。</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px"><a class="btn btn-dark" href="#story">物語をひらく</a><a class="btn btn-ghost" href="#ticket">試合情報を見る</a></div>
-        <div class="ticket-meta" style="max-width:780px;margin-top:48px"><div><small>DATE</small><strong>2026.9.19 SAT</strong></div><div><small>KICK OFF</small><strong>18:30</strong></div><div><small>MATCH</small><strong>浦和 vs 東京V</strong></div></div>
-      </div>
-    </header>
+<nav class="site-nav">
+  <a class="site-nav__brand" href="index.html">炎日 2026</a>
+  <div class="site-nav__links">
+    <a href="#story">物語</a>
+    <a href="#practical">開催概要</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="site-nav__cta" href="#ticket">チケット</a>
+  <button class="site-nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-panel">メニュー</button>
+</nav>
+<div class="site-nav__panel" id="nav-panel" data-nav-panel hidden>
+  <a href="#story">物語</a>
+  <a href="#practical">開催概要</a>
+  <a href="#faq">FAQ</a>
+  <a href="#ticket">チケット購入</a>
+</div>
 
-    <div class="story" id="story">
-      <section class="scene" id="scene-1"><div class="container scene-inner"><div class="scene-num" aria-hidden="true">一</div><div><p class="eyebrow">14:00 / THE FIRST SOUND</p><h2>静かな秋空に、<br>最初の太鼓が響く。</h2><p>ページの前半は余白を大きく取り、月・風・草・遠い太鼓の気配から始めます。最初から賑やかにしないことで、後半の熱量を際立たせます。</p><div class="scene-visual" aria-hidden="true"><div class="silhouette"></div></div></div></div></section>
-      <section class="scene" id="scene-2"><div class="container scene-inner"><div class="scene-num" aria-hidden="true">二</div><div><p class="eyebrow">15:00 / GATHER</p><h2>それぞれの音と踊りが、<br>月下に集う。</h2><p>よさこい、和太鼓、阿波踊り。団体数の多さを「出演一覧」ではなく、異なる文化が一つの景色をつくる過程として見せます。</p><div class="schedule-paper"><div class="schedule-row"><time>15:00</time><div><b>和太鼓</b><br>大地を鳴らすオープニング</div><span>STAGE A</span></div><div class="schedule-row"><time>15:35</time><div><b>よさこい</b><br>旗と鳴子が秋空を彩る</div><span>STAGE A</span></div><div class="schedule-row"><time>16:05</time><div><b>阿波踊り</b><br>見る阿呆から、踊る阿呆へ</div><span>YAGURA</span></div></div></div></div></section>
-      <section class="scene" id="scene-3"><div class="container scene-inner"><div class="scene-num" aria-hidden="true">三</div><div><p class="eyebrow">16:40 / JOIN THE CIRCLE</p><h2>櫓を囲む。<br>浦和が一つの輪になる。</h2><p>最大の見せ場は「みんなで浦和おどり」。上手さを競うのではなく、初めての人も子どもも、見るだけの人も輪の一部になれることを丁寧に伝えます。</p><div class="reveal-panel"><div class="rabbit-mark" aria-hidden="true">↗</div><h3>30秒だけ、予習してみる。</h3><p>手は大きく、足はゆっくり。途中参加・途中退出もOK。動画、4コマ、音なし版を用意し、参加のハードルを下げる想定です。</p><a class="btn btn-dark" href="#schedule">振り付けを見る（モック）</a></div></div></div></section>
-      <section class="scene" id="scene-4"><div class="container scene-inner"><div class="scene-num" aria-hidden="true">四</div><div><p class="eyebrow">17:30 / INTO THE STADIUM</p><h2>祭りは終わらない。<br>スタンドへ移っていく。</h2><p>炎日と試合を別のコンテンツとして分断せず、「櫓からスタンドへ」という移動を物語の転換点にします。背景は生成りから赤、そして夜の黒へ。</p><div class="match-strip" style="margin-top:30px;background:#32141a;color:#fff"><span class="match-team">浦和レッズ</span><span class="match-vs">18:30 KICK OFF</span><span class="match-team">東京ヴェルディ</span></div></div></div></section>
+<div class="notice-banner">
+  <div class="container"><p>このページはデザイン検討用モックです。記載内容・日時は仮情報です。<span class="provisional-flag" data-provisional="true">仮情報</span></p></div>
+</div>
+
+<div class="moon-track" aria-hidden="true">
+  <svg class="moon-track__moon" viewBox="0 0 100 100"><use href="assets/svg/moon-phases.svg#moon-9"></use></svg>
+</div>
+
+<main id="main">
+
+<header class="hero">
+  <div class="container">
+    <p class="hero__eyebrow eyebrow">DESIGN STUDY — PATTERN 02 / STORYTELLING</p>
+    <h1 class="hero__title">月が昇る。<br>浦和の祭りが始まる。</h1>
+    <p class="lede hero__lede">
+      静かな夕暮れから、灯がともり、輪ができ、声援に変わるまで。<br>
+      ひとつの夜を、四つの章で描く。
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#story">物語を読み始める</a>
+      <a class="btn btn--ghost" href="#practical">開催概要を先に見る</a>
     </div>
+  </div>
+</header>
 
-    <section class="section-pad" id="schedule"><div class="container"><p class="eyebrow">THE DAY AT A GLANCE</p><h2 class="section-title" style="font-family:serif">一日の絵巻を、<br>実用情報に戻す。</h2><p class="section-lead">物語を楽しんだ後は、時間・場所・料金・参加条件を一覧で確認可能。演出と情報の二層構造を明確にします。</p><div class="schedule-paper"><div class="schedule-row"><time>14:00</time><div><b>縁日・キッチンカー開始</b><br>南広場・調整池広場（仮）</div><span>FREE AREA</span></div><div class="schedule-row"><time>15:00</time><div><b>伝統芸能ステージ</b><br>出演団体・時間は個別ページでも案内</div><span>STAGE</span></div><div class="schedule-row"><time>16:40</time><div><b>みんなで浦和おどり</b><br>参加無料・途中参加歓迎（仮）</div><span>YAGURA</span></div><div class="schedule-row"><time>17:30</time><div><b>スタジアム入場推奨</b><br>混雑を避けて早めの移動を</div><span>GATE</span></div><div class="schedule-row"><time>18:30</time><div><b>浦和レッズ vs 東京ヴェルディ</b><br>埼玉スタジアム2002</div><span>MATCH</span></div></div></div></section>
+<div id="story">
 
-    <section class="section-pad" id="rabbit"><div class="container"><div class="reveal-panel"><div class="rabbit-mark" aria-hidden="true">兎</div><p class="eyebrow" style="margin-top:22px">A SMALL URAWA STORY</p><h2 class="section-title" style="font-family:serif">この月夜が、<br>浦和の月夜である理由。</h2><p class="section-lead">前半では兎を影や透かしとして忍ばせ、ここで初めて浦和と月・兎のつながりを短く紹介。調神社との公式コラボと誤認されない表現で、地域性を静かに回収します。</p><p class="mock-note" style="margin-top:24px">実制作時は、由来の正確な表現、神社名・写真・意匠の使用可否を関係者確認のうえ掲載します。</p></div></div></section>
+<section class="chapter chapter--01" aria-labelledby="ch1-h">
+  <div class="chapter__mark"><span class="vertical-accent">壱</span></div>
+  <div class="container">
+    <div class="chapter__body" data-reveal>
+      <span class="chapter__num eyebrow">CHAPTER 01 — 静</span>
+      <h2 id="ch1-h">陽が落ちて、<br>埼スタの空に色が戻る。</h2>
+      <p class="lede">まだ客席はまばらで、風の音の方が大きい。だが東の空には、もう小さな明るさがある。今日はいつもと違う日だと、空だけが知っている。</p>
+      <div class="emaki-rule" aria-hidden="true"></div>
+      <p>14:00、門が開く。縁日の提灯に、ひとつ、またひとつと灯が入る。</p>
+    </div>
+  </div>
+</section>
 
-    <section class="section-pad night-end" id="map"><div class="container"><p class="eyebrow">MAP & GUIDE</p><h2 class="section-title">絵巻の中から、<br>現地の道具へ。</h2><div class="simple-map" aria-label="会場マップのモック"><div class="map-pin"><span>櫓・総踊り</span></div><div class="map-pin"><span>ステージ</span></div><div class="map-pin"><span>縁日</span></div><div class="map-pin"><span>グルメ</span></div></div></div></section>
+<section class="chapter chapter--02" aria-labelledby="ch2-h">
+  <div class="chapter__mark"><span class="vertical-accent">弐</span></div>
+  <div class="container">
+    <div class="chapter__body" data-reveal>
+      <span class="chapter__num eyebrow">CHAPTER 02 — 灯</span>
+      <h2 id="ch2-h">和太鼓が鳴り、<br>祭りが息を吸う。</h2>
+      <p class="lede">最初の音は、いつも和太鼓と決まっている。腹の底に届く一打で、離れた場所にいた人たちの足が、自然と広場へ向く。</p>
+      <div class="emaki-rule" aria-hidden="true"></div>
+      <p>15:00、伝統芸能ステージが始まる。よさこい、阿波踊り——見る側と踊る側の境界が、少しずつ薄くなっていく。</p>
+    </div>
+  </div>
+</section>
 
-    <section class="section-pad night-end" id="faq"><div class="container"><p class="eyebrow">FAQ</p><h2 class="section-title">初めてでも、<br>物語に入れる。</h2><div class="faq-list" style="margin-top:32px"><details><summary>小さな子どもも浦和おどりに参加できますか？</summary><p>年齢・参加条件の確定後、対象や注意事項を分かりやすく掲載します。見学だけでも楽しめる配置を想定しています。</p></details><details><summary>イベントだけ参加できますか？</summary><p>無料エリアと観戦チケットが必要なエリアを、各コンテンツカードに明示する想定です。</p></details><details><summary>内容が変更された場合はどこで分かりますか？</summary><p>ページ最上部に更新・中止情報を固定表示し、各項目の最終更新日も表示します。</p></details></div></div></section>
+<section class="chapter chapter--03" aria-labelledby="ch3-h">
+  <div class="chapter__mark"><span class="vertical-accent">参</span></div>
+  <div class="container">
+    <div class="chapter__body" data-reveal>
+      <span class="chapter__num eyebrow">CHAPTER 03 — 輪</span>
+      <h2 id="ch3-h">みんなで浦和おどり。<br>輪が、閉じずに広がる。</h2>
+      <p class="lede">櫓を囲んで、知らない人同士が同じ振りを真似る。うまく踊れなくても構わない。輪はそういうものを受け入れるために、輪の形をしている。</p>
+      <div class="emaki-rule" aria-hidden="true"></div>
+      <p>16:40、この日いちばんの熱気。月はもう、だいぶ高い。</p>
+    </div>
+  </div>
+</section>
 
-    <section class="section-pad night-end" id="ticket"><div class="container"><p class="eyebrow">FINAL CHAPTER</p><h2 class="section-title">月の下で集い、<br>赤いスタンドへ。</h2><p class="section-lead">2026年9月19日（土）18:30キックオフ。祭りから試合まで続く一日を。</p><div style="margin-top:28px"><a class="btn btn-primary" href="#top">チケット購入ページへ（モック）</a></div><p class="mock-note" style="margin-top:28px">このページはデザイン検討用モックです。記載内容は仮情報です。</p></div></section>
-  </main>
+<section class="chapter chapter--04" aria-labelledby="ch4-h">
+  <div class="chapter__mark"><span class="vertical-accent">四</span></div>
+  <div class="container">
+    <div class="chapter__body" data-reveal>
+      <span class="chapter__num eyebrow">CHAPTER 04 — 声</span>
+      <h2 id="ch4-h">祭りの熱のまま、<br>スタンドへ。</h2>
+      <p class="lede">18:00、扉が開く。縁日の熱気を抱えたまま、人々はスタンドへ吸い込まれていく。同じ夜の、続きの物語。</p>
+      <div class="emaki-rule" aria-hidden="true"></div>
+      <p class="numeral"><span data-src="match.kickoff" data-provisional="true">18:30</span> キックオフ。浦和レッズ vs 東京ヴェルディ。</p>
+    </div>
+  </div>
+</section>
 
-  <nav class="utility-nav" aria-label="ページ内ナビゲーション"><div class="utility-nav__inner"><a href="#story">物語</a><a href="#schedule">時間</a><a href="#rabbit">浦和と月</a><a href="#map">マップ</a><a href="#faq">FAQ</a><a class="ticket" href="#ticket">チケット</a></div></nav>
-  <footer class="site-footer night-end"><div class="container site-footer__inner"><p>炎日 2026 SPECIAL PAGE MOCK / PATTERN 02</p><a href="index.html">5案を比較する</a></div></footer>
+</div>
+
+<section class="section" id="practical" aria-labelledby="practical-h">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow eyebrow">THE PRACTICAL PAGE</span>
+      <h2 id="practical-h">物語のあとに、要点だけ。</h2>
+      <p class="lede">読み物としての体裁を崩さぬよう、実務情報はここに独立させています。</p>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <span class="card__eyebrow eyebrow">DATE / KICK OFF</span>
+        <h3 class="card__title numeral" data-src="match.dateLabel" data-provisional="true">2026年9月19日（土）</h3>
+        <p class="card__body numeral">キックオフ <span data-src="match.kickoff" data-provisional="true">18:30</span></p>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow eyebrow">VENUE</span>
+        <h3 class="card__title" data-src="match.venue" data-provisional="true">埼玉スタジアム2〇〇2</h3>
+        <p class="card__body">縁日エリアは <span class="area-badge area-badge--free">FREE AREA</span></p>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow eyebrow">RAIN POLICY</span>
+        <h3 class="card__title">雨天決行</h3>
+        <p class="card__body">荒天時は一部企画を中止・変更する場合があります。</p>
+      </div>
+    </div>
+    <ol class="timeline" style="margin-top:var(--p-space-7)">
+      <li class="timeline__item"><span class="timeline__time numeral">14:00</span><h3>炎日開始</h3><p class="card__body">縁日・グルメエリアオープン <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral">15:00</span><h3>伝統芸能ステージ</h3><p class="card__body">和太鼓・よさこい・阿波踊り <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral">16:40</span><h3>浦和おどり総踊り</h3><p class="card__body">来場者参加型 <span class="area-badge area-badge--free">FREE AREA</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral">18:00</span><h3>スタジアム開場</h3><p class="card__body"><span class="area-badge area-badge--ticket">MATCH TICKET REQUIRED</span></p></li>
+      <li class="timeline__item"><span class="timeline__time numeral">18:30</span><h3>キックオフ</h3><p class="card__body">浦和レッズ vs 東京ヴェルディ <span class="area-badge area-badge--ticket">MATCH TICKET REQUIRED</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--tight" id="faq" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow eyebrow">FAQ</span>
+      <h2 id="faq-h">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-1">イベント内容・時間は確定情報ですか？</button>
+        <div class="faq__a" id="faq-a-1" data-faq-a><p>モック上の仮情報です。本番では最終更新日を明記し、変更時は上部の告知枠でお知らせします。</p></div>
+      </div>
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-2">チケットを持っていなくても楽しめますか？</button>
+        <div class="faq__a" id="faq-a-2" data-faq-a><p>14:00〜18:00の縁日・伝統芸能・浦和おどりは無料エリアで、試合観戦のみチケットが必要です。</p></div>
+      </div>
+      <div class="faq__item" data-faq-item>
+        <button class="faq__q" data-faq-q aria-controls="faq-a-3">雨天の場合はどうなりますか？</button>
+        <div class="faq__a" id="faq-a-3" data-faq-a><p>荒天時は縁日・ステージ企画の一部を中止・変更する場合があります。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-footer" id="ticket" aria-labelledby="cta-h">
+  <div class="container">
+    <h2 id="cta-h">この物語の続きは、<br>埼スタで。</h2>
+    <p class="lede">浦和レッズ vs 東京ヴェルディ。<span data-src="match.dateLabel" data-provisional="true">2026年9月19日（土）</span> <span data-src="match.kickoff" data-provisional="true">18:30</span> キックオフ。</p>
+    <a class="btn btn--primary" href="#top">チケット購入ページへ（モック）</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav class="site-footer__nav">
+      <a href="#story">物語</a>
+      <a href="#practical">開催概要</a>
+      <a href="#faq">FAQ</a>
+      <a href="#ticket">チケット</a>
+      <a href="index.html">5案を比較する</a>
+    </nav>
+    <p>このページはデザイン検討用モックです。記載内容は仮情報です。 / 炎日 2026 SPECIAL PAGE MOCK / PATTERN 02</p>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  if (!CSS.supports("animation-timeline: scroll()")) {
+    document.documentElement.classList.add("no-scroll-timeline");
+  }
+</script>
+<script src="assets/js/data-render.js"></script>
 </body>
 </html>
