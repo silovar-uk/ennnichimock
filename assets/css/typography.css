@@ -1,0 +1,95 @@
+/* ============================================================
+   炎日 2026 — TYPOGRAPHY
+   和文組版を洗練度の中核に置く。装飾ではなく可読性の設計。
+   ============================================================ */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--p-fs-1);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  font-feature-settings: "palt" 1;
+  text-rendering: optimizeLegibility;
+  line-break: strict;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 対応ブラウザでは文節単位の自動改行を優先し、未対応環境は line-break:strict にフォールバック */
+@supports (word-break: auto-phrase) {
+  p, .lede, .card__body, .faq__a {
+    word-break: auto-phrase;
+  }
+}
+
+@supports (text-wrap: pretty) {
+  p, h1, h2, h3, .lede {
+    text-wrap: pretty;
+  }
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt" 1;
+}
+
+h1, .h1 { font-size: clamp(var(--p-fs-4), 4.4vw + 1rem, var(--p-fs-6)); line-height: 1.55; }
+h2, .h2 { font-size: clamp(var(--p-fs-3), 2.6vw + 1rem, var(--p-fs-5)); line-height: 1.5; }
+h3, .h3 { font-size: clamp(var(--p-fs-2), 1.4vw + 1rem, var(--p-fs-3)); line-height: 1.55; }
+
+.lede {
+  font-size: clamp(var(--p-fs-1), 0.6vw + 0.95rem, var(--p-fs-2));
+  line-height: 1.9;
+  max-width: 32em; /* 和文の理想行長 40〜45字相当 */
+}
+
+p {
+  max-width: 34em;
+}
+
+/* 英数・記号は和文と別グリフになりがちなので、数字の並びだけ字送りを締める */
+.numeral, .eyebrow, .display-num {
+  font-family: var(--font-accent);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  font-size: var(--p-fs-0);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* 縦組みの気配（部分採用）：日付・演目名など短い要素に限定して使う */
+.vertical-accent {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-display);
+  letter-spacing: 0.16em;
+}
+
+/* 禁則・約物の視覚調整：句読点の後の詰まり過ぎを回避 */
+p, .card__body {
+  font-kerning: normal;
+}
+
+::selection {
+  background: var(--accent-ember);
+  color: var(--p-ink-90);
+}
+
+/* フォーカス可視性 — 全要素共通、色は各案の accent-ember を継承 */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

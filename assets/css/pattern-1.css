@@ -1,0 +1,103 @@
+/* ============================================================
+   PATTERN 01 — 九灯の月夜
+   人格：最も祭りらしい高揚感。提灯の灯りが軸。暖色を最も強く出す。
+   ============================================================ */
+
+:root {
+  --surface-night: #0e0f1c;
+  --surface-night-raised: #1a1a2e;
+  --accent-ember: #f0a868;
+  --accent-ember-bright: #ffd9a0;
+  --motion-ease: cubic-bezier(0.34, 1.56, 0.64, 1); /* わずかな弾みで祝祭感を出す */
+}
+
+.hero--p1 {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 8%, color-mix(in srgb, var(--accent-ember) 22%, transparent), transparent),
+    linear-gradient(180deg, var(--surface-night-deep), var(--surface-night) 70%);
+}
+
+/* ---------- 提灯レール（サイン要素） ---------- */
+.lantern-rail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--p-space-2);
+  padding: var(--p-space-6) 0 var(--p-space-4);
+  position: relative;
+}
+
+.lantern-rail::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--line-gold) 60%, transparent), transparent);
+}
+
+.lantern-btn {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--p-space-2);
+  color: var(--p-night-70);
+  transition: color var(--motion-base) var(--motion-ease);
+  min-width: 0;
+}
+
+.lantern-btn__icon {
+  width: clamp(2rem, 6vw, 3.4rem);
+  height: calc(clamp(2rem, 6vw, 3.4rem) * 1.5);
+  transition: filter var(--motion-slow) var(--motion-ease), color var(--motion-slow) var(--motion-ease);
+  filter: saturate(0.4) brightness(0.7);
+}
+
+.lantern-btn__num {
+  font-family: var(--font-accent);
+  font-size: var(--p-fs-00);
+}
+
+.lantern-btn[aria-pressed="true"] {
+  color: var(--accent-ember-bright);
+}
+.lantern-btn[aria-pressed="true"] .lantern-btn__icon {
+  filter: saturate(1) brightness(1) drop-shadow(0 0 10px color-mix(in srgb, var(--accent-ember) 70%, transparent));
+  color: var(--accent-ember);
+}
+
+.lantern-btn:hover .lantern-btn__icon { filter: saturate(0.8) brightness(0.9); }
+
+/* ---------- 月相インジケータ ---------- */
+.moon-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--p-space-3);
+  justify-content: center;
+  margin-block: var(--p-space-5);
+  color: var(--accent-ember-bright);
+}
+.moon-indicator svg { width: 2.2rem; height: 2.2rem; }
+.moon-indicator__label {
+  font-family: var(--font-accent);
+  font-size: var(--p-fs-0);
+  color: var(--ink-on-night-muted);
+}
+
+/* ---------- 灯された提灯の詳細カード ---------- */
+.lantern-detail {
+  border-left: 2px solid var(--accent-ember);
+  padding-left: var(--p-space-5);
+  margin-bottom: var(--p-space-5);
+}
+.lantern-detail[hidden] { display: none; }
+.lantern-detail__tag {
+  color: var(--accent-ember);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--motion-slow) var(--motion-ease), transform var(--motion-slow) var(--motion-ease);
+}
+[data-reveal].is-revealed { opacity: 1; transform: none; }

@@ -1,0 +1,22 @@
+/* ============================================================
+   比較ページ（index.html）専用
+   ============================================================ */
+:root {
+  --accent-ember: #e8a868;
+}
+
+.pattern-grid {
+  display: grid;
+  gap: var(--p-space-5);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) { .pattern-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .pattern-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.pattern-card__media {
+  background-size: cover;
+  background-position: center;
+}
+.pattern-card__eyebrow { color: var(--accent-ember); }
+
+.compare-table-wrap { overflow-x: auto; }

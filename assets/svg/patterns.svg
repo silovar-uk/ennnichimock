@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 青海波：セクション区切りや余白の意匠に薄く敷く -->
+    <pattern id="seigaiha" width="56" height="28" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M0 28 A28 28 0 0 1 28 0 A28 28 0 0 1 56 28 A28 28 0 0 0 28 8 A28 28 0 0 0 0 28Z"
+            fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+    </pattern>
+
+    <!-- 輪：出演団体・来場者・クラブを結ぶための同心円ノードモチーフ -->
+    <symbol id="ring-motif" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+      <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+      <circle cx="100" cy="100" r="8" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 月相 0〜9（新月→満月）。fill は currentColor 継承、使用側で --accent-ember-bright 等を指定 -->
+    <symbol id="moon-0" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.5"/></symbol>
+    <symbol id="moon-1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.6"/><path d="M50 16 A34 34 0 0 1 50 84 A12 34 0 0 0 50 16Z" fill="currentColor"/></symbol>
+    <symbol id="moon-2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.6"/><path d="M50 16 A34 34 0 0 1 50 84 A20 34 0 0 0 50 16Z" fill="currentColor"/></symbol>
+    <symbol id="moon-3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/><path d="M50 16 A34 34 0 0 0 50 84 A16 34 0 0 0 50 16Z" fill="var(--surface-night,#0c1024)"/></symbol>
+    <symbol id="moon-4" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/><path d="M50 16 A34 34 0 0 0 50 84 A6 34 0 0 0 50 16Z" fill="var(--surface-night,#0c1024)"/></symbol>
+    <symbol id="moon-5" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/></symbol>
+    <symbol id="moon-6" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/><path d="M50 16 A34 34 0 0 1 50 84 A6 34 0 0 1 50 16Z" fill="var(--surface-night,#0c1024)"/></symbol>
+    <symbol id="moon-7" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/><path d="M50 16 A34 34 0 0 1 50 84 A16 34 0 0 1 50 16Z" fill="var(--surface-night,#0c1024)"/></symbol>
+    <symbol id="moon-8" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.6"/><path d="M50 16 A34 34 0 0 0 50 84 A20 34 0 0 1 50 16Z" fill="currentColor"/></symbol>
+    <symbol id="moon-9" viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="currentColor"/></symbol>
+  </defs>
+</svg>

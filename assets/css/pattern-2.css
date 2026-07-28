@@ -1,0 +1,91 @@
+/* ============================================================
+   PATTERN 02 — 月影絵巻
+   人格：最も抑制的で文学的。暖色は要所にのみ使う。静→動の物語構造。
+   ============================================================ */
+
+:root {
+  --surface-night-deep: #060812;
+  --surface-night: #0a0e1c;
+  --surface-night-raised: #10182c;
+  --accent-ember: #d98a4a; /* 彩度を落とした熾火色。使用箇所を絞る */
+  --accent-ember-bright: #e8b287;
+  --ink-on-night-muted: #9aa4c2;
+  --motion-slow: 900ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- 章立て（縦組みの章番号） ---------- */
+.chapter {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-block: var(--p-space-8);
+  border-bottom: 1px solid color-mix(in srgb, var(--p-night-70) 20%, transparent);
+}
+
+.chapter__mark {
+  position: absolute;
+  top: var(--p-space-6);
+  right: var(--p-space-5);
+}
+.chapter__mark .vertical-accent {
+  font-size: var(--p-fs-1);
+  color: var(--ink-on-night-muted);
+  opacity: 0.7;
+}
+
+.chapter__body { max-width: 30em; }
+.chapter__num { color: var(--accent-ember); display: block; margin-bottom: var(--p-space-3); }
+
+/* ---------- 月の軌道（スクロール駆動） ---------- */
+.moon-track {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.moon-track__moon {
+  position: absolute;
+  width: clamp(3rem, 9vw, 7rem);
+  height: clamp(3rem, 9vw, 7rem);
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  color: var(--accent-ember-bright);
+  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent-ember) 55%, transparent));
+  opacity: 0.9;
+}
+
+/* scroll-driven animation：対応ブラウザのみ有効化。フォールバックは静止した月（top:18%固定）。 */
+@supports (animation-timeline: scroll()) {
+  @keyframes moon-rise {
+    0%   { top: 100%; opacity: 0; }
+    12%  { opacity: 0.9; }
+    100% { top: 6%; opacity: 1; }
+  }
+  .moon-track__moon {
+    animation: moon-rise linear forwards;
+    animation-timeline: scroll(root);
+    top: 6%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .moon-track__moon { animation: none !important; top: 10%; opacity: 0.8; }
+}
+/* 未対応 or JS/CSS両無効時のフォールバック位置 */
+.no-scroll-timeline .moon-track__moon { top: 10%; opacity: 0.8; }
+
+/* ---------- 背景の階調変化（章ごとに濃度を変える） ---------- */
+.chapter--01 { background: linear-gradient(180deg, var(--surface-night-deep), var(--surface-night)); }
+.chapter--02 { background: linear-gradient(180deg, var(--surface-night), #12162c); }
+.chapter--03 { background: linear-gradient(180deg, #12162c, color-mix(in srgb, var(--accent-ember) 8%, #14182c)); }
+.chapter--04 { background: linear-gradient(180deg, color-mix(in srgb, var(--accent-ember) 8%, #14182c), color-mix(in srgb, var(--p-club-red-deep) 22%, #150c10)); }
+
+.emaki-rule {
+  width: 2px;
+  height: var(--p-space-8);
+  background: linear-gradient(var(--accent-ember), transparent);
+  margin-block: var(--p-space-6);
+}

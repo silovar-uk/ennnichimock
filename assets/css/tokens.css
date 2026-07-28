@@ -1,0 +1,110 @@
+/* ============================================================
+   炎日 2026 — DESIGN TOKENS
+   Layer 1: Primitive  → 生の値。意味を持たない原器。
+   Layer 2: Semantic    → 役割名。全案共通のデフォルト値。
+   Layer 3: Pattern     → 各 pattern-N.css で上書き（人格の分離点）。
+   ============================================================ */
+
+:root {
+  /* ---------- 1. PRIMITIVE ---------- */
+
+  /* 夜空 — 藍から漆黒への階調 */
+  --p-night-100: #f5f0e6; /* 障子紙、満月の余白 */
+  --p-night-90:  #d8dce6; /* 月光の銀 */
+  --p-night-70:  #7c8bab;
+  --p-night-50:  #465071;
+  --p-night-40:  #2f3958;
+  --p-night-30:  #202a47;
+  --p-night-20:  #161d38;
+  --p-night-10:  #0c1024;
+  --p-night-05:  #070912;
+
+  /* 炎 — 提灯の灯、浦和の赤 */
+  --p-ember-70:  #ffd9a0; /* 灯芯の白熱 */
+  --p-ember-50:  #f0a868; /* 提灯の紙灯 */
+  --p-ember-30:  #e2703c; /* 熾火 */
+  --p-club-red:  #c8102e; /* クラブレッド（浦和） */
+  --p-club-red-deep: #8f0c21;
+
+  /* 墨・紙 */
+  --p-ink-90:    #1b1a17;
+  --p-ink-60:    #4a473f;
+  --p-paper-100: #f7f3ea;
+  --p-paper-90:  #ece4d3;
+  --p-gold-line: #b08d4f; /* 金線・箔押し感の罫 */
+
+  /* 寸法原器（8px基準 + 黄金比寄りの見出しスケール） */
+  --p-space-1: 0.25rem;
+  --p-space-2: 0.5rem;
+  --p-space-3: 0.75rem;
+  --p-space-4: 1rem;
+  --p-space-5: 1.5rem;
+  --p-space-6: 2rem;
+  --p-space-7: 3rem;
+  --p-space-8: 4.5rem;
+  --p-space-9: 6.5rem;
+  --p-space-10: 9rem;
+
+  /* タイポスケール原器（1.2弱の緩やかなスケール、和文向け） */
+  --p-fs-00: 0.75rem;
+  --p-fs-0:  0.875rem;
+  --p-fs-1:  1rem;
+  --p-fs-2:  1.25rem;
+  --p-fs-3:  1.625rem;
+  --p-fs-4:  2.125rem;
+  --p-fs-5:  2.75rem;
+  --p-fs-6:  3.75rem;
+  --p-fs-7:  5.25rem;
+
+  /* イージング原器 */
+  --p-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --p-ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --p-ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---------- 2. SEMANTIC（全案共通デフォルト。pattern-N.css で上書き） ---------- */
+
+  --surface-night-deep: var(--p-night-05);
+  --surface-night: var(--p-night-10);
+  --surface-night-raised: var(--p-night-20);
+  --surface-paper: var(--p-paper-100);
+  --surface-paper-raised: var(--p-paper-90);
+
+  --ink-on-night: var(--p-night-100);
+  --ink-on-night-muted: var(--p-night-90);
+  --ink-on-paper: var(--p-ink-90);
+  --ink-on-paper-muted: var(--p-ink-60);
+
+  --accent-ember: var(--p-ember-50);
+  --accent-ember-bright: var(--p-ember-70);
+  --accent-club: var(--p-club-red);
+  --accent-club-deep: var(--p-club-red-deep);
+  --line-gold: var(--p-gold-line);
+
+  --focus-ring: var(--p-ember-70);
+
+  /* フォントロール（typography.css で実体を定義） */
+  --font-display: "Shippori Mincho B1", "Hiragino Mincho ProN", serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-accent: "Shippori Antique B1", var(--font-display);
+
+  /* モーション（pattern別に速度・曲線を上書き可） */
+  --motion-fast: 180ms;
+  --motion-base: 320ms;
+  --motion-slow: 640ms;
+  --motion-ease: var(--p-ease-out-soft);
+
+  /* レイアウト */
+  --container-w: min(100% - 2.5rem, 72rem);
+  --radius-card: 4px;
+  --radius-pill: 999px;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+  }
+}
